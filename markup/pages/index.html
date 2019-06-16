@@ -1,0 +1,77 @@
+<!doctype html>
+<html  lang="ru">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page">
+	<div class="page__wrapper">
+		{{> header/header}}
+		{{> hero/hero}}
+		{{> clubabout/clubabout}}
+		{{> directions/directions}}
+		{{> quadrant/quadrant}}
+		{{> youget/youget}}
+		{{> autor/autor}}
+		{{> famous/famous}}
+		{{> meeting/meeting}}
+		{{> x2/x2}}
+		{{> format/format}}
+		{{> accordion/accordion}}
+
+		<div class="section repeat x2">
+			<div class="section__bg"></div>
+			<div class="layout layout-x ">
+				<div class="paginator"><span>11</span></div>
+				<div class="layout layout-s">
+					<div class="section__content">
+						<h2 class="title__section" role="heading" aria-level="2">Что произойдет после того, <span>как ты заполнишь форму?</span></h2>
+						<div class="x2__wrap">
+							<ul class="todo">
+								<li class="todo-1">
+									<div class="todo__num">01</div>
+									Ты подаешь заявку
+								</li>
+								<li>
+									<div class="todo__num">02</div>
+									С тобой связывается менеджер <br>и проводит аудит бизнеса
+								</li>
+								<li>
+									<div class="todo__num">03</div>
+									Проходишь собеседование <br>с директором закрытого клуба
+								</li>
+							</ul>
+							<ul class="todo">
+								<li  class="todo-last">
+									<div class="todo__num ">
+										<i class="icon-check"></i>
+									</div>
+									Поздравляем, ты в клубе!
+								</li>
+								<li>
+									<div class="todo__num">05</div>
+									Оплачиваешь участие
+								</li>
+								<li class="todo-bd">
+									<div class="todo__num">04</div>
+									Твою кандидатуру <br>утверждает Дима Ковпак
+								</li>
+							</ul>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-red">Подать заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{> prefooter/prefooter}}
+		{{> footer/footer}}
+	</div>
+
+	<script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

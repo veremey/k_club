@@ -1,0 +1,59 @@
+
+<div class="section pref text-center">
+	<div class="section__bg">
+		<picture>
+			<source srcset="static/img/content/pref.webp "
+			        type="image/webp">
+			<img src="static/img/content/pref.png" alt="dima kovpak" class="section__img">
+		</picture>
+	</div>
+	<div class="layout">
+		<h2 class="title__section no-line" role="heading" aria-level="2">Оставляй заявку <br>на индивидуальное собеседование</h2>
+		<form action="/" method="post" class="pref__form js-validate">
+			<fieldset class="pref__fieldset">
+				<input class="name" type="text" name="name" id="name" placeholder="Имя">
+			</fieldset>
+			<fieldset class="pref__fieldset">
+				<input class="phone" type="tel" name="phone" id="phone" placeholder="Номер телефона" required="">
+			</fieldset>
+			<fieldset class="pref__fieldset">
+				<div class="filter js-filter">
+					<div class="filter__text js-filter-text">
+						<span>Ваша роль в бизнесе</span>
+					</div>
+					<input class="js-filter-input" type="hidden" value="" name="type">
+					<ul class="filter__list js-filter-list">
+						<li class="filter__row" data-id="0">
+							<span>Руководитель</span>
+						</li>
+						<li class="filter__row" data-id="1">
+							<span>Менеджер</span>
+						</li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset class="pref__fieldset">
+				<div class="filter js-filter">
+					<div class="filter__text js-filter-text">
+						<span>Доход</span>
+					</div>
+					<input class="js-filter-input" type="hidden" value="" name="type">
+					<ul class="filter__list js-filter-list">
+						<li class="filter__row" data-id="0">
+							<span> > 10 000$</span>
+						</li>
+						<li class="filter__row" data-id="1">
+							<span>< 10 000$</span>
+						</li>
+					</ul>
+				</div>
+			</fieldset>
+
+
+			<fieldset class="pref__fieldset">
+				<button class="btn btn-red">Подать заявку</button>
+			</fieldset>
+
+		</form>
+	</div>
+</div>

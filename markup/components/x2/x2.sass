@@ -1,0 +1,110 @@
+.x2
+	padding: 120px 0 170px
+	.title__section
+		color: #282626
+	&__wrap
+		margin-bottom: 100px
+	.section__img
+		min-width: 100%
+		max-width: none
+
+
+.todo
+	padding: 0
+	margin: 0
+	list-style: none
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	li
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		width: 33.333333%
+		position: relative
+		padding: 60px 30px 30px
+		color: $dark
+		border-bottom: 2px solid $yellow
+		font-size: 18px
+		+mb
+	.todo-1
+		border-bottom: none
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			height: 2px
+			width: 50%
+			background-color: $yellow
+			+try(-2px)
+			z-index: -1
+	.todo-last
+		border-bottom: none
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 60%
+			height: 2px
+			width: 40%
+			+gh($n, $yellow)
+			+try(-2px)
+			z-index: -1
+		.todo__num
+			background-color: $n
+			width: auto
+			height: auto
+	&__num
+		position: absolute
+		bottom: -20px
+		display: inline-block
+		vertical-align: top
+		width: 40px
+		height: 40px
+		background-color: $yellow
+		color: #fff
+		border-radius: 100%
+		text-align: center
+		line-height: 40px
+		font-size: 16px
+		+mbl
+	&-bd
+		border-right: 2px solid $yellow
+
+
+.icon-check
+	display: inline-block
+	vertical-align: top
+	+bg($icon-check-big)
+
+
+.repeat
+	padding: 40px 0 30px
+	background: #0d0d0d url('../img/content/black-bg5.jpg') repeat
+	.section__bg
+		+coverdiv
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			top: 0
+			left: 80%
+			+arr(200, 100, rgba(0, 0, 0, .5), b)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			bottom: 0
+			left: 36%
+			+arr(400, 200, rgba(0, 0, 0, .5), t)
+	.title__section
+		color: #fff
+	.todo
+		li
+			color: #fff
+		&__num
+			color: $black

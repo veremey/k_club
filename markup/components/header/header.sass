@@ -1,0 +1,56 @@
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	padding: 14px 0
+	z-index: 1
+	&__list
+		display: inline-block
+		vertical-align: top
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 12px
+			&.is-active
+				a
+					color: $red
+		a
+			color: #fff
+	.layout-s
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+
+.logo
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	text-transform: uppercase
+	font-size: 56px
+	color: #fff
+	letter-spacing: -.07em
+	+hbl
+	sup
+		display: inline-block
+		top: -2em
+		border: 1px solid #fff
+		letter-spacing: 0em
+		font-size: 30%
+		+mbl
+		line-height: .8
+		padding: 2px 3px
+
+
+.trigger
+	position: absolute
+
+.is-scrolled
+	.header
+		background-color: rgba(38, 37, 33, .9)
+		z-index: 1000

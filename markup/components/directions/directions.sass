@@ -1,0 +1,60 @@
+
+.directions
+	padding: 80px 0 70px
+	&__list
+		padding: 0
+		margin: 0 0 60px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		font-size: 0
+		li
+			position: relative
+			width: 22%
+			display: block
+			background-color: #f7f7f7
+			border-radius: 10px
+			overflow: hidden
+		h3
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 18px
+			text-transform: uppercase
+			color: $black
+			background-color: $yellow
+			text-align: center
+			padding: 10px 14px
+			margin: 0
+			+mbl
+	&__sublist
+		padding: 24px 24px 14px
+		margin: 0
+		height: 100%
+		font-size: 0
+		list-style: none
+		display: flex
+		justify-content: center
+		flex-direction: column
+
+		li
+			display: block
+			width: 100%
+			position: relative
+			font-size: 18px
+			color: #373737
+			text-indent: 0px
+			margin-bottom: 10px
+			+ml
+			&:before
+				content: '\2192'
+				font-size: 20px
+				margin-right: 10px
+				color: $yellow
+				+mb
+	.title__section
+		margin-bottom: 80px

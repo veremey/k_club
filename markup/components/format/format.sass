@@ -1,0 +1,93 @@
+
+
+.format
+	padding: 40px 0 30px
+	background: #0d0d0d url('../img/content/black-bg5.jpg') repeat
+	&__bg
+		+coverdiv
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			top: 0
+			left: 80%
+			+arr(200, 100, rgba(0, 0, 0, .5), b)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			bottom: 0
+			left: 36%
+			+arr(400, 200, rgba(0, 0, 0, .5), t)
+	&__list
+		padding: 0
+		margin: 0
+		list-style: none
+		font-size: 0
+		display: flex
+		justify-content: center
+		text-align: left
+		li
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			max-width: 330px
+			border-radius: 6px
+			margin: 0 30px 20px
+			overflow: hidden
+			background-color: #fff
+			text-align: center
+			font-size: 16px
+			color: $black
+			+mr
+		b
+			+mb
+	&__title
+		text-transform: uppercase
+		font-size: 20px
+		padding: 16px
+		text-transform: uppercase
+		text-align: center
+		margin: 0
+		+mbl
+
+	&__content
+		display: flex
+		flex-direction: column
+		padding: 20px 20px 24px
+	&--sea
+		background-color: #016d8e
+	&--yellow
+		background-color: $yellow
+	&__sublist
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			position: relative
+			display: block
+			margin: 0 0 20px
+			padding: 0 0 0 20px
+			text-align: left
+			&:after
+				content: ''
+				position: absolute
+				top: 2px
+				left: 0
+				display: inline-block
+				vertical-align: top
+				+bg($icon-bird)
+	&__footer
+		margin-top: auto
+		h3
+			color: $black
+			font-size: 16px
+			+mbl
+		s
+			color: #7b5d09
+		p
+			color: $yellow
+	.title__section
+		margin-bottom: 90px
+	.btn
+		margin-top: 20px

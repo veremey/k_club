@@ -1,0 +1,174 @@
+
+
+$n: transparent
+$yellow: #ffbd00
+$black: #0c0c0c
+$dark: #282626
+$white: #f6f6f6
+$red: #94251d
+$gray: #e9e9e9
+
+
++font('montserrat-black', 'montserrat-black')
++font('montserrat-bold', 'montserrat-bold')
++font('montserrat-extrabold', 'montserrat-extrabold')
++font('montserrat-extralight', 'montserrat-extralight')
++font('montserrat-light', 'montserrat-light')
++font('montserrat-medium', 'montserrat-medium')
++font('montserrat-regular', 'montserrat-regular')
++font('montserrat-semibold', 'montserrat-semibold')
++font('montserrat-thin', 'montserrat-thin')
++font('HeliBla', 'HeliBla')
+
+=mt
+	font-family: 'montserrat-thin', sans-serif
+	font-weight: 100
+=msb
+	font-family: 'montserrat-semibold', sans-serif
+	font-weight: 600
+=mr
+	font-family: 'montserrat-regular', sans-serif
+	font-weight: 400
+=mm
+	font-family: 'montserrat-medium', sans-serif
+	font-weight: 500
+=ml
+	font-family: 'montserrat-light', sans-serif
+	font-weight: 300
+=mel
+	font-family: 'montserrat-extralight', sans-serif
+	font-weight: 200
+=meb
+	font-family: 'montserrat-extrabold', sans-serif
+	font-weight: 800
+=mb
+	font-family: 'montserrat-bold', sans-serif
+	font-weight: 700
+=mbl
+	font-family: 'montserrat-black', sans-serif
+	font-weight: 900
+=hbl
+	font-family: 'HeliBla', sans-serif
+
+
+
+
+.title
+	&__main
+		text-transform: uppercase
+		color: #fff
+		font-size: 70px
+		line-height: 1.2em
+		+mbl
+		+r(1024)
+			font-size: 24px
+		mark
+			color: $yellow
+			background-color: $n
+			padding: 0 8px
+	&__line
+		position: relative
+		padding-left: 10px
+		margin-bottom: .2em
+		font-size: 30px
+		color: #fff
+		+ml
+		&:after
+			content: ''
+			position: absolute
+			top: .1em
+			bottom: .2em
+			left: 0
+			width: 4px
+			background-color: $yellow
+	&__section
+		position: relative
+		font-size: 36px
+		color: #fff
+		text-transform: uppercase
+		+mbl
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			top: calc(100% + 10px)
+			width: 386px
+			height: 8px
+			background-color: $yellow
+			+trx(-120px)
+		span
+			display: block
+			padding-left: 20px
+		&.no-line
+			&:after
+				content: none
+	&__ac
+		font-size: 16px
+		color: $black
+		text-transform: uppercase
+		font-size: 16px
+		+mbl
+	&__p
+		font-size: 20px
+		color: $black
+		+mbl
+
+.desc
+	&__ac
+		font-size: 14px
+		color: #353535
+	&__indent
+		padding-left: 4em
+
+.btn
+	display: inline-block
+	vertical-align: top
+	padding: 12px 20px
+	background-color: $yellow
+	color: $black
+	border-radius: 4px
+	box-shadow: 0px 10px 15px 0px rgba(255, 189, 0, 0.25)
+	text-transform: uppercase
+	font-size: 14px
+	+tr(.4s)
+	&:hover
+		color: #fff
+	&-red
+		background-color: $red
+		padding: 16px 30px
+		box-shadow: 0px 10px 15px 0px rgba(148, 37, 29, 0.25)
+		color: #fff
+		border-radius: 30px
+		+mb
+		&:hover
+			color: $dark
+
+	&-close
+		width: 20px
+		height: 20px
+		display: inline-block
+		position: absolute
+		top: 14px
+		right: 14px
+		&:before
+			content: ''
+			position: absolute
+			top: 3px
+			left: 4px
+			width: 18px
+			height: 2px
+			background-color: #e9e9e9
+			+rotate(45)
+			transform-origin: 0 0
+		&:after
+			content: ''
+			position: absolute
+			top: 16px
+			left: 2px
+			width: 18px
+			height: 2px
+			background-color: #e9e9e9
+			+rotate(-45)
+			transform-origin: 0 0
+		&:hover
+			background-color: #ccc

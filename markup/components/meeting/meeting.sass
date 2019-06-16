@@ -1,0 +1,56 @@
+
+.meeting
+	padding: 40px 0 30px
+	background: #0d0d0d url('../img/content/black-bg5.jpg') repeat
+	&__bg
+		+coverdiv
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			top: 0
+			left: 80%
+			+arr(200, 100, rgba(0, 0, 0, .5), b)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			bottom: 0
+			left: 36%
+			+arr(400, 200, rgba(0, 0, 0, .5), t)
+	&__list
+		position: relative
+		padding: 0
+		margin: 70px 0 50px
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-wrap: wrap
+		list-style: none
+		font-size: 0
+		text-align: left
+		li
+			position: relative
+			display: block
+			padding: 0 0 0 16px
+			vertical-align: top
+			width: 40%
+			margin: 0 auto
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 16px
+				left: 0
+				width: 4px
+				border-color:
+				background-color:  $yellow
+		h3
+			font-size: 18px
+			color: #fff
+			+mbl
+		p
+			font-size: 14px
+			color: #fff
+			margin-bottom: 1em
+			+mr

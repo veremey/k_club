@@ -1,0 +1,106 @@
+
+.youget
+	padding: 50px 0
+	background: #0d0d0d url('../img/content/black-bg5.jpg') repeat
+	&__bg
+		+coverdiv
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			top: 0
+			left: 80%
+			+arr(200, 100, rgba(0, 0, 0, .5), b)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			bottom: 0
+			left: 36%
+			+arr(400, 200, rgba(0, 0, 0, .5), t)
+	&__list
+		padding: 0
+		margin: 0 0 60px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		font-size: 0
+		li
+			position: relative
+			width: 30%
+			display: block
+			background-color: $yellow
+			border-radius: 0 10px
+			overflow: hidden
+		h3
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			display: flex
+			align-items: center
+			font-size: 18px
+			text-transform: uppercase
+			color: $black
+			background-color: $yellow
+			padding: 10px 14px
+			margin: 0
+			+mbl
+	&__num
+		position: absolute
+		top: -6px
+		right: -38%
+		display: block
+		+rotate(45)
+		font-size: 24px
+		line-height: 2
+		background-color: $dark
+		text-align: center
+		width: 100px
+		color: $yellow
+		transform: translate(-100%, 0) rotate(45deg)
+		+mt
+	&__sublist
+		padding: 24px 50px 14px 24px
+		margin: 0
+		height: 100%
+		font-size: 0
+		list-style: none
+		li
+			display: block
+			width: 100%
+			position: relative
+			font-size: 14px
+			color: #373737
+			text-indent: 0px
+			margin-bottom: 10px
+			+mr
+			&:before
+				content: '\2192'
+				font-size: 20px
+				margin-right: 10px
+				color: $dark
+				+mb
+	&__tri
+		padding: 0
+		margin: 0
+		list-style: none
+		font-size: 0
+		li
+			display: block
+			position: relative
+			font-size: 14px
+			padding: 0
+			border-radius: 0
+			+msb
+			&:before
+				content: '\2665'
+				display: inline-block
+				font-size: 16px
+				margin-right: 0px
+				border-radius: 0
+				color: $dark
+				+mb
+				transform: translate(-10px, 2px) rotate(-90deg)
+	.title__section
+		margin-bottom: 80px

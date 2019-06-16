@@ -1,0 +1,84 @@
+
+.famous
+	position: relative
+	padding-bottom: 80px
+	.title__section
+		color: #282626
+
+.slider
+	color: $dark
+	margin-left: -10px
+	&__item
+		width: 30%//
+		text-align: center
+		padding: 6px
+	&__header
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 20px
+	&__pic
+		position: relative
+		display: inline-block
+		width: 100%
+		max-width: 140px
+		vertical-align: top
+		margin: 0 auto 10px
+		font-size: 0
+		border: 6px solid $yellow
+	&__img
+		width: 100%
+	&__about
+		p
+			font-size: 16px
+			+mr
+		b
+			+mb
+	&__content
+		position: relative
+		z-index: 5
+		&:before
+			content: ''
+			position: absolute
+			top: -8px
+			left: -8px
+			right: -8px
+			height: 60px
+			background-color: $red
+			z-index: -1
+		p
+			margin-bottom: .8em
+	&__text
+		position: relative
+		background-color: #fff
+		text-align: left
+		padding: 15px
+		font-size: 14px
+		color: #2a2a2a
+		+mr
+	&__nav
+		margin-top: 30px
+		text-align: center
+
+.carusel
+	.arrow
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 36px
+		height: 36px
+		background-color: $yellow
+		svg
+			display: inline-block
+			vertical-align: top
+			height: 16px
+			fill: #fff
+			+vcenter
+			+tr(.4s)
+		&:hover
+			svg
+				fill: $dark
+		&-left
+			svg
+				transform: translate(-50%, -50%) rotate(180deg)
+	.slick-slide
+		margin-left: 10px
