@@ -27,6 +27,8 @@
 		display: flex
 		justify-content: center
 		text-align: left
+		+r(700)
+			flex-wrap: wrap
 		li
 			display: inline-block
 			vertical-align: top
@@ -40,6 +42,10 @@
 			font-size: 16px
 			color: $black
 			+mr
+			+r(700)
+				width: 100%
+			+r(500)
+				margin: 0 0 20px
 		b
 			+mb
 	&__title
@@ -50,7 +56,22 @@
 		text-align: center
 		margin: 0
 		+mbl
-
+	&__plus
+		position: relative
+		font-size: 16px
+		text-align: left
+		border-bottom: 1px solid #ebebeb
+		padding-bottom: 4px
+		padding-left: 20px
+		margin-bottom: 14px
+		color: #097191
+		+meb
+		&:after
+			content: '\002B'
+			color: $yellow
+			position: absolute
+			top: 0px
+			left: 2px
 	&__content
 		display: flex
 		flex-direction: column

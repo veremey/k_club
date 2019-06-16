@@ -11,6 +11,8 @@
 			top: 0
 			left: 80%
 			+arr(200, 100, rgba(0, 0, 0, .5), b)
+			+r(1024)
+				left: 10%
 		&:after
 			content: ''
 			position: absolute
@@ -18,12 +20,17 @@
 			bottom: 0
 			left: 36%
 			+arr(400, 200, rgba(0, 0, 0, .5), t)
+			+r(670)
+				+arr(200, 100, rgba(0, 0, 0, .5), t)
+			+r(500)
+				+arr(100, 50, rgba(0, 0, 0, .5), t)
 	&__list
 		padding: 0
 		margin: 0 0 60px
 		width: 100%
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
+		flex-wrap: wrap
 		font-size: 0
 		li
 			position: relative
@@ -32,6 +39,10 @@
 			background-color: $yellow
 			border-radius: 0 10px
 			overflow: hidden
+			+r(900)
+				width: 100%
+				max-width: 280px
+				margin: 20px
 		h3
 			position: absolute
 			top: 0
@@ -43,20 +54,20 @@
 			text-transform: uppercase
 			color: $black
 			background-color: $yellow
-			padding: 10px 14px
+			padding: 10px 58px 10px 14px
 			margin: 0
 			+mbl
 	&__num
 		position: absolute
 		top: -6px
-		right: -38%
+		right: -280px
 		display: block
 		+rotate(45)
 		font-size: 24px
 		line-height: 2
 		background-color: $dark
 		text-align: center
-		width: 100px
+		width: 200px
 		color: $yellow
 		transform: translate(-100%, 0) rotate(45deg)
 		+mt

@@ -8,11 +8,17 @@
 	box-shadow: 0 0 30px 20px rgba(0, 0, 0, .2)
 	&__content
 		width: 68%
+		+r(500)
+			width: 90%
+			position: relative
+			z-index: 10
 	&__pic
 		font-size: 0
 		position: absolute
 		bottom: 0
 		left: 60%
+		+r(500)
+			bottom: -40px
 	p
 		font-size: 18px
 		color: $yellow

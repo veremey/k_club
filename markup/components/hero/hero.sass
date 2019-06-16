@@ -7,17 +7,33 @@
 	padding-top: 92px // header height
 	&__content
 		position: relative
-		padding-top: 60px
+		padding-top: 20vh
+		+r(1100)
+			width: 70%
+		+r(650)
+			width: 70%
+		+r(500)
+			padding-left: 20px
+			width: 100%
 	&__footer
 		position: absolute
 		top: 100%
 		left: 50%
+		width: 100%
+		max-width: 440px
 		transform: translate(-50%, -50%)
 		padding: 35px 40px 15px
 		background-color: #fff
 		border-radius: 30px
 		box-shadow: 0 0 30px 20px rgba(0, 0, 0, .2)
 		text-align: center
+		z-index: 1
+		+r(1024)
+			padding: 10px 20px 12px
+			border-radius: 10px
+		+r(500)
+			left: 20px
+			transform: translate(0px, -50%)
 		p
 			font-size: 14px
 			margin-bottom: .5em
@@ -36,6 +52,13 @@
 		span
 			top: 10px
 			bottom: auto
+	.section__img
+		+r(1400)
+			left: 70%
+			transform: translate(-70%, -50%)
+		+r(650)
+			left: 74%
+			transform: translate(-74%, -50%)
 
 .right-box
 	position: absolute

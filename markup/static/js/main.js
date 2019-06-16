@@ -23,6 +23,7 @@ $(document).ready(function () {
 		'padding-top' : maxHeight + 40
 	});
 
+
 	var maxHeight1 = 0;
 	$(".youget__list .title__dir").each(function(){
 		if ($(this).height() > maxHeight1) {
@@ -39,22 +40,49 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		prevArrow: $('.arrow-left'),
-		nextArrow: $('.arrow-right')
+		nextArrow: $('.arrow-right'),
+		responsive: [
+		    {
+		      breakpoint: 1100,
+		      settings: {
+		        slidesToShow: 2,
+		      }
+		    },
+		    {
+		      breakpoint: 850,
+		      settings: {
+		        slidesToShow: 1,
+		      }
+		    },
+		    {
+		      breakpoint: 650,
+		      settings: {
+		      	slidesToShow: 1,
+		      	slidesToScroll: 1,
+		        adaptiveHeight: true
+		      }
+		    }
+		  ]
 	});
 
-	var maxHeight2 = 0;
-	$(".slider__item .slider__header").each(function(){
-		if ($(this).height() > maxHeight1) {
-			maxHeight1 = $(this).height(); }
-	});
-	$(".slider__item .slider__header").height(maxHeight1);
+	if($(document).width() > 700){
 
-	var maxHeight3 = 0;
-	$(".format .format__content").each(function(){
-		if ($(this).height() > maxHeight1) {
-			maxHeight1 = $(this).height(); }
-	});
-	$(".format .format__content").height(maxHeight1);
+		var maxHeight2 = 0;
+		$(".slider__item .slider__header").each(function(){
+			if ($(this).height() > maxHeight1) {
+				maxHeight1 = $(this).height(); }
+		});
+		$(".slider__item .slider__header").height(maxHeight1);
+	}
+
+	if($(document).width() > 700){
+		var maxHeight3 = 0;
+		$(".format .format__content").each(function(){
+			if ($(this).height() > maxHeight1) {
+				maxHeight1 = $(this).height(); }
+		});
+		$(".format .format__content").height(maxHeight1);
+	}
 
 	filter();
 
@@ -93,6 +121,24 @@ $(document).ready(function () {
 		$('.accordion__text').slideUp();
 		$(this).addClass('is-active');
 		$(this).find('.accordion__text').slideDown();
+	});
+
+	$(".js-top").on("click touchstart" , function (event) {
+			event.preventDefault();
+
+			$('html,body').animate({
+					scrollTop: 0
+			}, 1000, 'swing');
+			hashTagActive = this.hash;
+	});
+
+	$('.trigger').click(function(e){
+
+		if($(this).hasClass('is-active')){
+			$(this).removeClass('is-active');
+		} else {
+			$(this).addClass('is-active');
+		}
 	});
 
 }); // docready

@@ -5,7 +5,7 @@
 	left: 0
 	width: 100%
 	padding: 14px 0
-	z-index: 1
+	z-index: 1000
 	&__list
 		display: inline-block
 		vertical-align: top
@@ -16,16 +16,38 @@
 			display: inline-block
 			vertical-align: top
 			margin: 0 12px
-			&.is-active
+			+r(1220)
+				text-align: center
+				display: block
+				margin-bottom: 12px
+			&.is-active,
+			&:hover
 				a
-					color: $red
+					color: $yellow
 		a
 			color: #fff
+			+tr(.4s)
+	&__wrap
+		+r(1220)
+			position: fixed
+			top: 0
+			bottom: 0
+			left: 100%
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: rgba(0, 0, 0, .9)
+			z-index: 1000
 	.layout-s
 		display: flex
 		align-items: center
 		justify-content: space-between
 		width: 100%
+		position: relative
+	.layout-x
+		+r(650)
+			padding: 0 10px
 
 .logo
 	display: inline-block
@@ -35,7 +57,12 @@
 	font-size: 56px
 	color: #fff
 	letter-spacing: -.07em
+	cursor: pointer
 	+hbl
+	+r(500)
+		font-size: 44px
+	+r(400)
+		font-size: 34px
 	sup
 		display: inline-block
 		top: -2em
@@ -46,9 +73,65 @@
 		line-height: .8
 		padding: 2px 3px
 
-
 .trigger
 	position: absolute
+	top: 30px
+	right: 20px
+	display: flex
+	align-items: center
+	cursor: pointer
+	user-select: none
+	display: none
+	z-index: 1010
+	+r(1200)
+		display: flex
+	+r(500)
+		right: 10px
+		top: 20px
+	+r(400)
+		top: 10px
+	&__btn
+		display: inline-block
+		vertical-align: top
+		position: relative
+		width: 36px
+		height: 20px
+		padding: 2px
+		z-index: 9
+		cursor: pointer
+		text-align: right
+		&:hover
+			opacity: .7
+
+	&.is-active
+		border-color: transparent !important
+		z-index: 1010
+		&:hover
+			opacity: .9
+		.line
+			width: 32px
+			top: 11px
+			&-1
+				+rotate(45)
+			&-2
+				+rotate(-45)
+		+ .header__wrap
+			left: 0
+.line
+	position: absolute
+	right: 0
+	display: inline-block
+	vertical-align: top
+	transform-origin: 50% 50%
+	height: 2px
+	background-color: #fff
+	+tr(.6s)
+	&-1
+		top: 4px
+		width: 32px
+	&-2
+		width: 26px
+		bottom: 4px
 
 .is-scrolled
 	.header

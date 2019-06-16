@@ -91,6 +91,8 @@ p
 	&-x
 		max-width: 1640px
 		padding: 0 65px
+		+r(500)
+			padding: 0 20px
 	&-s
 		max-width: 1170px
 
@@ -101,6 +103,8 @@ p
 	padding-right: 8px
 	border-right: 2px solid #ccc
 	z-index: 2
+	+r(650)
+		display: none
 	span
 		position: absolute
 		bottom: 10px
@@ -109,6 +113,8 @@ p
 		font-size: 50px
 		color: #fff
 		+mt
+		+r(1024)
+			font-size: 36px
 		&:after
 			content: ''
 			position: absolute
@@ -123,6 +129,7 @@ p
 			color: $black
 .section
 	position: relative
+	padding: 0 10px
 	&:nth-child(odd)
 		.paginator
 			right: auto

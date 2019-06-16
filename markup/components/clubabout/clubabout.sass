@@ -2,12 +2,21 @@
 .clubabout
 	// background: #fff url('../img/content/wh-bg.jpg') repeat
 	padding: 130px 0
+	+r(850)
+		padding: 120px 0 60px
 	&__content
 		position: relative
 		padding: 85px 300px 120px 85px
 		border-radius: 20px
 		max-width: 880px
 		background: #0d0d0d url('../img/content/black-bg5.jpg') repeat
+		+r(1300)
+			width: 100%
+			padding: 60px 60px 60px 120px
+		+r(850)
+			padding: 40px
+		+r(500)
+			padding: 30px 20px
 		&:before
 			content: ''
 			position: absolute
@@ -35,14 +44,27 @@
 		width: 100%
 		max-width: 550px
 		box-shadow: 0 0 30px 20px rgba(0, 0, 0, .2)
+		+r(1300)
+			position: relative
+			top: 0
+			left: 0
+			+trx(-20px)
+		+r(1250)
+			margin-top: 20px
+		+r(850)
+			+trx(0)
 	&__footer
 		position: absolute
 		bottom: 20px
 		left: 20px
 		display: flex
 		align-items: center
+		flex-wrap: wrap
 		width: 100%
 		margin-top: 60px
+		+r(850)
+			position: static
+			margin-top: 30px
 	&__btn
 		display: flex
 		align-items: center
@@ -54,12 +76,14 @@
 		border: 1px solid $red
 		border-radius: 30px
 		+tr(.4s)
+		+r(850)
+			width: 100%
+			margin-bottom: 10px
 		&:hover
 			background-color: rgba(255, 255, 255, .9)
 			color: $dark
 		img
 			margin-right: 20px
-
 
 	.section__img
 		height: auto
@@ -71,10 +95,14 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		+r(1250)
+			flex-direction: column
 	.title__section
 		margin-bottom: 2em
 	.layout-s
 		+trx(-60px)
+		+r(1300)
+			+trx(0)
 
 
 .video
